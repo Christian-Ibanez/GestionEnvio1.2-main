@@ -1,0 +1,99 @@
+
+{
+  "idEnvio": 4,
+  "estadoEnvio": "ENTREGADO",
+  "fechaEnvio": "2023-11-05 09:30:00",
+  "direccionDestino": "Av. Providencia 7034, Santiago",
+  "codigoSeguimiento": "ECO202311001",
+  "idPedido": 101
+}
+
+{
+  "idEnvio": 5,
+  "estadoEnvio": "ENTREGADO",
+  "fechaEnvio": "2023-11-07 14:15:00",
+  "direccionDestino": "Calle Cardenio Avello 567, Concepcion",
+  "codigoSeguimiento": "ECO202311002",
+  "idPedido": 102
+}
+
+{
+  "idEnvio": 6,
+  "estadoEnvio": "EN_CAMINO",
+  "fechaEnvio": "2023-11-20 10:00:00",
+  "direccionDestino": "Pasaje Uno 1463, Hualpen",
+  "codigoSeguimiento": "ECO202311003",
+  "idPedido": 103
+}
+
+{
+  "idEnvio": 7,
+  "estadoEnvio": "PENDIENTE",
+  "fechaEnvio": "2023-11-21 08:45:00",
+  "direccionDestino": "Av. Libertador Bernardo O'Higgins 987, Santiago",
+  "codigoSeguimiento": "ECO202311004",
+  "idPedido": 104
+}
+    
+{
+  "idEnvio": 8,
+  "estadoEnvio": "EN_CAMINO",
+  "fechaEnvio": "2023-11-20 16:30:00",
+  "direccionDestino": "Calle Sidney 2491, Hualpen",
+  "codigoSeguimiento": "ECOINT20231101",
+  "idPedido": 105
+}
+
+{
+  "idEnvio": 9,
+  "estadoEnvio": "PENDIENTE",
+  "fechaEnvio": "2023-06-12 08:45:00",
+  "direccionDestino": "Calle Bremen 1604, Hualpen",
+  "codigoSeguimiento": "ECO202311004",
+  "idPedido": 106
+}
+    
+{
+  "idEnvio": 10,
+  "estadoEnvio": "EN_CAMINO",
+  "fechaEnvio": "2024-10-20 16:30:00",
+  "direccionDestino": "Camilo Henriquez 425, Concepcion",
+  "codigoSeguimiento": "ECOINT20231101",
+  "idPedido": 107
+}
+
+{
+  "idEnvio": 11,
+  "estadoEnvio": "PENDIENTE",
+  "fechaEnvio": "2023-11-20 09:15:00",
+  "direccionDestino": "Av. Providencia 1234, Santiago",
+  "codigoSeguimiento": "ECO2023112001",
+  "idPedido": 108
+}
+
+{
+  "idEnvio": 12,
+  "estadoEnvio": "EN_CAMINO",
+  "fechaEnvio": "2023-11-20 10:30:00",
+  "direccionDestino": "Calle Los Alerces 567, Valdivia",
+  "codigoSeguimiento": "ECO2023112002",
+  "idPedido": 109
+}
+
+{
+  "idEnvio": 13,
+  "estadoEnvio": "ENTREGADO",
+  "fechaEnvio": "2023-11-19 14:00:00",
+  "direccionDestino": "Pasaje Los Olivos 89, Antofagasta",
+  "codigoSeguimiento": "ECO2023111901",
+  "idPedido": 110
+}
+
+{
+    "idEnvio": 1,
+    "estadoEnvio": "PENDIENTE",
+    "fechaEnvio": "2025-07-01 10:30:00",
+    "direccionDestino": "Avenida Siempre Viva 123, Santiago",
+    "codigoSeguimiento": "ABC123456",
+    "idPedido": 1001
+  }
