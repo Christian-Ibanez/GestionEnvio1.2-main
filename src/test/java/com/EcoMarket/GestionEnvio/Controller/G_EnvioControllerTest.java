@@ -134,24 +134,24 @@ public class G_EnvioControllerTest {
 
     @Test
     void testObtenerEnvioPorId_Existente() throws Exception {
-    // 1. Configurar datos de prueba
-    int idEnvioExistente = 1;
-    G_Envio envioMock = new G_Envio();
-    envioMock.setIdEnvio(idEnvioExistente);
-    envioMock.setEstadoEnvio(Estado.PENDIENTE);
-    envioMock.setCodigoSeguimiento("ABC123");
+        // 1. Configurar datos de prueba
+        int idEnvioExistente = 1;
+        G_Envio envioMock = new G_Envio();
+        envioMock.setIdEnvio(idEnvioExistente);
+        envioMock.setEstadoEnvio(Estado.PENDIENTE);
+        envioMock.setCodigoSeguimiento("ABC123");
 
-    // 2. Configurar el mock del servicio para devolver el envío cuando se busque por ID
-    when(g_EnvioService.obtenerEnvioId(idEnvioExistente))
-        .thenReturn(Optional.of(envioMock));
+        // 2. Configurar el mock del servicio para devolver el envío cuando se busque por ID
+        when(g_EnvioService.obtenerEnvioId(idEnvioExistente))
+                .thenReturn(Optional.of(envioMock));
 
-    // 3. Ejecutar la petición y verificar
-    mockMvc.perform(get("/api/envios/{id}", idEnvioExistente))
+        // 3. Ejecutar la petición y verificar
+        mockMvc.perform(get("/api/envios/id/{id}", idEnvioExistente))
            .andExpect(status().isOk())
            .andExpect(jsonPath("$.idEnvio").value(idEnvioExistente))
            .andExpect(jsonPath("$.estadoEnvio").value("PENDIENTE"))
            .andExpect(jsonPath("$.codigoSeguimiento").value("ABC123"));
-    }
+        }
 
     @Test
     void testObtenerEnvioPorId_NoExistente() throws Exception {
@@ -159,7 +159,23 @@ public class G_EnvioControllerTest {
 
         mockMvc.perform(get("/envios/99"))
                 .andExpect(status().isNotFound());
-    }
+        }
+
+    @Test
+    void testObtenerEnvioRunCliente() throws Exception {
+        // 1. Configurar datos de prueba
+        int envioRunCliente = 12345678;
+        G_Envio envioMock = new G_Envio();
+        envioMock.setIdEnvio(envioRunCliente);
+        envioMock.setEstadoEnvio(Estado.PENDIENTE);
+        envioMock.setCodigoSeguimiento("ABC123");
+
+        when(g_EnvioService.obtenerEnvioId(envioRunCliente))
+                .thenReturn(Optional.of(envioMock));
+        }
+        
+
+        
 
     @Test
     void testActualizarEstadoEnvio_OK() throws Exception {

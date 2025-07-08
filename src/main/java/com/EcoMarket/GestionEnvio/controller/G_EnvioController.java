@@ -53,17 +53,17 @@ public class G_EnvioController {
     // Obtener todos los envíos
     @GetMapping
     public ResponseEntity<List<G_Envio>> pedirEnvios() {
-    List<G_Envio> envios = envioService.pedirEnvios();
-    return ResponseEntity.ok(envios);  // Siempre devuelve 200, incluso si la lista está vacía
-}
-
+        List<G_Envio> envios = envioService.pedirEnvios();
+        return ResponseEntity.ok(envios);  // Siempre devuelve 200, incluso si la lista está vacía
+    }
+    
     // Obtener envío por ID
-    @GetMapping("/{id}")
+    @GetMapping("id/{id}")
     public ResponseEntity<G_Envio> obtenerEnvioPorId(@PathVariable int id) {
-    return envioService.obtenerEnvioId(id)
+        return envioService.obtenerEnvioId(id)
             .map(ResponseEntity::ok)
             .orElse(ResponseEntity.notFound().build());
-}
+    }
 
     // Actualizar estado de envío
     @PutMapping("/{id}/estado")
@@ -71,12 +71,12 @@ public class G_EnvioController {
         @PathVariable int id,
         @RequestParam Estado estado) {
     
-    G_Envio envioActualizado = envioService.actualizarEstadoEnvio(id, estado);
+        G_Envio envioActualizado = envioService.actualizarEstadoEnvio(id, estado);
     
-    if (envioActualizado != null) {
-        return ResponseEntity.ok(envioActualizado);
-    }
-    return ResponseEntity.notFound().build();
+        if (envioActualizado != null) {
+            return ResponseEntity.ok(envioActualizado);
+        }
+        return ResponseEntity.notFound().build();
     }
 
     

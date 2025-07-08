@@ -29,6 +29,7 @@ public class G_EnvioService  {
         return envioRepository.findAll();
     }
 
+
     // Obtener envío por ID
     public Optional<G_Envio> obtenerEnvioId(int id) {
     if (id <= 0) {
@@ -44,6 +45,7 @@ public class G_EnvioService  {
         return Optional.empty();
     }
     }
+    
 
     // Actualizar estado de envío
     public G_Envio actualizarEstadoEnvio(int id, Estado nuevoEstado) {

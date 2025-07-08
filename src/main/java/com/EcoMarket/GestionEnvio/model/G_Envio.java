@@ -48,4 +48,5 @@ public class G_Envio {
     @Min(value = 1, message = "El ID del pedido debe ser mayor que 0")
     @Column(name = "id_pedido", nullable = false, unique = true)
     private int idPedido; 
+
 }
